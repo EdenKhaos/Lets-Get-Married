@@ -3,9 +3,10 @@ import "./App.css";
 import VenuePage from "./pages/Venue";
 import CateringPage from "./pages/Catering";
 import LodgingPage from "./pages/Lodging";
+import Home from "./pages/Home";
 
 function App() {
-  return <VenuePage />;
+  return <Home />;
 }
 
 // function App() {
