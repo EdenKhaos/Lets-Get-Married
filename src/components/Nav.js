@@ -1,9 +1,10 @@
 import React from 'react';
+import "./Nav.css";
 
 function Nav() {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Navbar.Brand href="#home">Let's Get Married</Navbar.Brand>
+  <Navbar.Brand href="#home">Lets Get Married</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
@@ -18,6 +19,7 @@ function Nav() {
       </NavDropdown>
     </Nav>
     <Nav>
+
       <Nav.Link href="#deets">Signup</Nav.Link>
       <Nav.Link eventKey={2} href="#memes">
         Login
@@ -25,7 +27,7 @@ function Nav() {
     </Nav>
   </Navbar.Collapse>
 </Navbar>
-    )
+    );
 }
 
 export default Nav;

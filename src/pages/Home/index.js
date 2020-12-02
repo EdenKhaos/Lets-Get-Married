@@ -4,14 +4,14 @@ import Footer from "../../components/Footer";
 import Main from "../../components/Main/Main";
 import "/.style.css";
 
-const Home = () => {
+function Home () {
+
     return (
         <>
         <Nav />
         <Main />
-        <Footer />
-        </>
+      <Footer />
+      </>
     )
 }
-
 export default Home;
