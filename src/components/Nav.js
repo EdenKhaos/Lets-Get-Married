@@ -1,8 +1,8 @@
 import React from 'react';
-import { Navbar, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 
-function Nav() {
+function Navagation () {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Navbar.Brand href="#home">Lets Get Married</Navbar.Brand>
@@ -22,13 +22,13 @@ function Nav() {
     <Nav>
 
       <Nav.Link href="#deets">Signup</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
+      {/* <Nav.Link eventKey={2} href="#memes">
         Login
-      </Nav.Link>
+      </Nav.Link> */}
     </Nav>
   </Navbar.Collapse>
 </Navbar>
     );
 }
 
-export default Nav;
+export default Navagation;
