@@ -1,5 +1,4 @@
 import React from 'react';
-
 import "./Nav.css";
 
 function Nav() {
@@ -20,7 +19,8 @@ function Nav() {
       </NavDropdown>
     </Nav>
     <Nav>
-      <Nav.Link href="#deets">Sign Up</Nav.Link>
+
+      <Nav.Link href="#deets">Signup</Nav.Link>
       <Nav.Link eventKey={2} href="#memes">
         Login
       </Nav.Link>
@@ -29,4 +29,5 @@ function Nav() {
 </Navbar>
     );
 }
+
 export default Nav;
