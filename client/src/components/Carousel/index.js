@@ -1,35 +1,36 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import "bootstrap/dist/css/bootstrap.min.css";
+import './style.css';
 
 
-import chipmunk from './imgs/chipmunk.jpg';
-import bishop from './imgs/bishop.jpg';
-import mountain from './imgs/mountain.jpg';
+import chipmunk from './imgs/chipmunkad.jpg';
+import bishop from './imgs/bishopad.jpg';
+import mountain from './imgs/mountainad.jpg';
 
 
 const CarouselPage = () => {
     return (
         <Carousel>
-            <Carousel.Item interval={1000}>
-                <img
+            <Carousel.Item interval={2500}>
+                <img width={1000} height={600}
                     className="d-block w-100"
                     src={chipmunk}
                     alt="chipmunk"
                 />
             </Carousel.Item>
-            <Carousel.Item interval={500}>
-                <img
+            <Carousel.Item interval={2500}>
+                <img width={1000} height={600}
                     className="d-block w-100"
                     src={bishop}
-                    alt="Third slide"
+                    alt="second slide"
                 />
             </Carousel.Item>
-            <Carousel.Item interval={1000}>
-                <img
+            <Carousel.Item interval={2500}>
+                <img width={1000} height={600}
                     className="d-block w-100"
                     src={mountain}
-                    alt="Third slide"
+                    alt="third slide"
                 />
             </Carousel.Item>
         </Carousel>

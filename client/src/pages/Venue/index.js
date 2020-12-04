@@ -80,7 +80,7 @@ export default function App() {
 
       <Locate panTo={panTo} />
       <Search panTo={panTo} />
-
+      {/* map location on page*/}
       <GoogleMap
         id="map"
         mapContainerStyle={mapContainerStyle}
@@ -89,7 +89,7 @@ export default function App() {
         options={options}
         onClick={onMapClick}
         onLoad={onMapLoad}
-      >
+      > {/* marker locations and size of icon pin on map when placed */}
         {markers.map((marker) => (
           <Marker
             key={`${marker.lat}-${marker.lng}`}
@@ -105,7 +105,7 @@ export default function App() {
             }}
           />
         ))}
-
+        {/* info window when clicked on pin icon, allows to close when clicked again */}
         {selected ? (
           <InfoWindow
             position={{ lat: selected.lat, lng: selected.lng }}
@@ -128,7 +128,7 @@ export default function App() {
     </div>
   );
 }
-//locate function/position on map based off of coordinates/location given
+//locate function/position on map based off of coordinates/location given from user
 function Locate({ panTo }) {
   return (
     <button
