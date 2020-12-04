@@ -68,11 +68,12 @@ export default function App() {
 
   if (loadError) return "Error";
   if (!isLoaded) return "Loading...";
-// locate button, search, makers, info window and map functions
+// locate button, search, markers, info window and map functions
   return (
     <div>
+      {/* map name */}
       <h1>
-        Venue{" "}
+        Catering{" "}
         <span role="img" aria-label="champagne">
          🍾
         </span>
@@ -80,7 +81,7 @@ export default function App() {
 
       <Locate panTo={panTo} />
       <Search panTo={panTo} />
-
+      {/* map location on page*/}
       <GoogleMap
         id="map"
         mapContainerStyle={mapContainerStyle}
@@ -89,7 +90,7 @@ export default function App() {
         options={options}
         onClick={onMapClick}
         onLoad={onMapLoad}
-      >
+      > {/* marker locations and size of icon pin on map when placed */}
         {markers.map((marker) => (
           <Marker
             key={`${marker.lat}-${marker.lng}`}
@@ -105,7 +106,7 @@ export default function App() {
             }}
           />
         ))}
-
+        {/* info window when clicked on pin icon, allows to close when clicked again */}
         {selected ? (
           <InfoWindow
             position={{ lat: selected.lat, lng: selected.lng }}
@@ -128,7 +129,7 @@ export default function App() {
     </div>
   );
 }
-//locate function/position on map based off of coordinates/location given
+//locate function/position on map based off of coordinates/location given from user
 function Locate({ panTo }) {
   return (
     <button
@@ -144,7 +145,7 @@ function Locate({ panTo }) {
           () => null
         );
       }}
-    >
+    > {/* compass icon*/}
       <img src="/compass.svg" alt="compass - locate me" />
     </button>
   );

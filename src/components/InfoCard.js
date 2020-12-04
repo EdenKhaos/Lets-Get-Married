@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const InfoCard = (props) => {
   return (
@@ -13,7 +14,7 @@ const InfoCard = (props) => {
           {props.title}
         </Card.Title>
         <Card.Text className="cards-component-text">
-          {props.summary}
+          <Link to={props.link} target="_blank">{props.summary}</Link>
         </Card.Text>
       </Card.Body>
     </Card>

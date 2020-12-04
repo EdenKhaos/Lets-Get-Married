@@ -1,0 +1,12 @@
+.d-flex {
+        display: flex;
+        justify-content: space-between;
+        /* margin-left: 18%;      
+        margin-right: 18%; */
+        /* width: auto;
+        float: none;  */
+}
+.col-lg-3 {
+        margin-top: 3%;      
+        margin-bottom: 3%; 
+}

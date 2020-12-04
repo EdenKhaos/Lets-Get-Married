@@ -9,8 +9,8 @@ function Home () {
         <>
         <Nav />
         <Main />
-      <Footer />
-      </>
+        <Footer />
+        </>
     )
 }
 export default Home;
