@@ -1,0 +1,35 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "wedding-app",
+  "proxy": "http://localhost:3001/",
+  "dependencies": {
+    "axios": "^0.18.1",
+    "bootstrap": "^4.5.3",
+    "node-sass": "^4.14.1",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.8",
+    "reactstrap": "^8.7.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/preset-react": "^7.12.7"
+  }
+}
