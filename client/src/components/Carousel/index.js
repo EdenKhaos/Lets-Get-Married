@@ -16,7 +16,7 @@ const CarouselPage = () => {
                 <img width={1000} height={600}
                     className="d-block w-100"
                     src={chipmunk}
-                    alt="first slide"
+                    alt="chipmunk"
                 />
             </Carousel.Item>
             <Carousel.Item interval={2500}>
