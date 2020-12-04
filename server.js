@@ -59,5 +59,5 @@ mongoose.connection.on('error', (err) => {
 // Start the API server
 app.listen(PORT, (error) => {
   if (error) throw error;
-  console.log(`🌎  connected on port ${PORT} 🌍`.cyan);
+  console.log(`🌎  connected on port ${PORT} 🌍`);
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from "../../components/TopNav";
+import Navigation from "../../components/TopNav";
 import Footer from "../../components/Footer";
 import Main from "../../components/Main";
 
@@ -7,7 +7,7 @@ function Home () {
 
     return (
         <>
-        <Nav />
+        <Navigation />
         <Main />
         <Footer />
         </>

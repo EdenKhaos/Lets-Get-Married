@@ -4,6 +4,13 @@
   "description": "wedding-app",
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "@reach/combobox": "^0.12.1",
+    "@react-google-maps/api": "^1.13.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.5.0",
+    "date-fns": "^2.16.1",
+    "use-places-autocomplete": "^1.6.0",
     "axios": "^0.18.1",
     "bootstrap": "^4.5.3",
     "node-sass": "^4.14.1",
