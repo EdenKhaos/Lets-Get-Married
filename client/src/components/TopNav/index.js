@@ -18,7 +18,8 @@ import {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { loggedIn, logout } = useContext(UserContext);
+  const {  logout } = useContext(UserContext);
+  // console.log("hello world", loggedIn)
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -27,7 +28,7 @@ const Navigation = () => {
   return (
     <div>
       <Navbar collapseOnSelect className="color-name" expand="lg" bg="light" variant="light">
-      <Navbar.Brand href="#home">
+      <NavbarBrand href="#home">
         <img
           src={logo}
           width="100"
@@ -35,8 +36,8 @@ const Navigation = () => {
           className="d-inline-block align-top"
           alt="logo"
         />
-      </Navbar.Brand>
-      <Navbar.Brand href="#Main">Planning | Budget | Checklist</Navbar.Brand>
+      </NavbarBrand>
+      <NavbarBrand href="#Main">Planning | Budget | Checklist</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
@@ -51,7 +52,7 @@ const Navigation = () => {
                 <i className="fas fa-user-secret"></i>
               </DropdownToggle>
               <DropdownMenu right>
-                {loggedIn ? (
+                {true ? (
                   <DropdownItem>
                     <NavLink onClick={logout}>Logout</NavLink>
                   </DropdownItem>
