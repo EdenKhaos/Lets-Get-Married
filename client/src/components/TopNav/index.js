@@ -1,34 +1,15 @@
 import React, { useState, useContext } from 'react';
 import logo from './imgs/smlogo.png';
-import UserContext from '../../utils/UserContext';
+// import UserContext from '../../utils/UserContext';
 import './style.css';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from 'reactstrap';
+import { useAuth0 } from '@auth0/auth0-react';
+import { Nav, Navbar } from 'react-bootstrap';
+import Login from '../LoginButton';
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const {  logout } = useContext(UserContext);
-  // console.log("hello world", loggedIn)
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div>
-      <Navbar collapseOnSelect className="color-name" expand="lg" bg="light" variant="light">
-      <NavbarBrand href="#home">
+    <Navbar collapseOnSelect className="color-name" expand="lg" bg="light" variant="light">
+      <Navbar.Brand href="#home">
         <img
           src={logo}
           width="100"
@@ -36,42 +17,18 @@ const Navigation = () => {
           className="d-inline-block align-top"
           alt="logo"
         />
-      </NavbarBrand>
-      <NavbarBrand href="#Main">Planning | Budget | Checklist</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/">Home</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/profile">Profile</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                <i className="fas fa-user-secret"></i>
-              </DropdownToggle>
-              <DropdownMenu right>
-                {true ? (
-                  <DropdownItem>
-                    <NavLink onClick={logout}>Logout</NavLink>
-                  </DropdownItem>
-                ) : (
-                  <>
-                    <DropdownItem>
-                      <NavLink href="/login">Login</NavLink>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <NavLink href="/signup">Signup</NavLink>
-                    </DropdownItem>
-                  </>
-                )}
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
-  );
+      </Navbar.Brand>
+    <Navbar.Brand href="#home">Planning | Budget | Checklists</Navbar.Brand>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Collapse id="responsive-navbar-nav">
+      <Nav className="mr-auto">
+        
+      </Nav>
+      <Nav>
+        <Login />
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
+  ) 
 };
 export default Navigation;
