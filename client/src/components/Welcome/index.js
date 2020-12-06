@@ -1,16 +1,15 @@
 import React, { useContext } from 'react';
-import './Profile.scss';
 import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import UserContext from '../../utils/UserContext';
 
-const Profile = () => {
+const Welcome = () => {
   const { user, loggedIn, logout } = useContext(UserContext);
   return (
     <div className="profileBox">
       {loggedIn ? (
         <div>
-          <h1> Welcome back {user && user.firstname}</h1>
+          <h1> Welcome back {user && user.firstname},To Planning Your Big Day!</h1>
           <Button onClick={logout}>Logout</Button>
         </div>
       ) : (
@@ -25,4 +24,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Welcome;
