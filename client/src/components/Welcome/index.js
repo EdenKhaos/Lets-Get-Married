@@ -1,12 +1,13 @@
 import React from 'react';
+import { Row } from 'react-bootstrap';
 
 
 const Welcome = () => {
   return (
     <div className="profileBox">
-        <div>
-          <h1> Welcome To Planning Your Big Day!</h1>
-        </div>
+      <div className="p-5 center message-component-style">
+        <h3> Welcome To Planning Your Big Day!</h3>
+      </div>
     </div>
   );
 };

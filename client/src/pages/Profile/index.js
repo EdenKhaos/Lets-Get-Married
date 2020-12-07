@@ -1,10 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from 'react-bootstrap';
-import InfoCard from "../../components/InfoCard";
 import Welcome from "../../components/Welcome";
-import budget from './images/budget.jpg';
-import todo from './images/todo.jpg';
-import guests from './images/guests.jpg';
+import Footer from '../../components/Footer';
+import ProfileNav from '../../components/ProfileNav';
 import { useAuth0 } from "@auth0/auth0-react";
 
 
@@ -15,16 +13,18 @@ const ProfilePage = () => {
   console.log(user)
   return (
     <Container fluid className = "p-0" >
+      <ProfileNav />
       <Row>
-        <div>
+        <div className="center-screen">
         <Col>
           <Welcome className="col-12" />
-          <img src={user.picture} alt={user.name} />
-          <h2>{user.name}</h2>
-          <p>{user.email}</p>
+          <img className="profile" src={user.picture} alt={user.name} />
+          <h2 className="name">{user.name}</h2>
+          <p className="email">{user.email}</p>
         </Col>
         </div>
       </Row>
+      <Footer />
     </Container >
   )
 }

@@ -5,7 +5,7 @@ import './style.css';
 const Header = () => {
   return (
     <div className="p-5 center message-component-style">
-      <p>Let's Get Married!</p> 
+      <h1>Let's Get Married!</h1> 
     </div>
   );
 };

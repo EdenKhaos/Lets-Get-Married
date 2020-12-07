@@ -17,7 +17,7 @@ import Loading from './components/Loading';
 // import UserProvider from './utils/UserContext';
 // import Auth from './pages/Auth';
 // import NoMatch from './pages/NoMatch';
-// import GuestsPage from './pages/Guests';
+import GuestsPage from './pages/Guests';
 // import BudgetPage from './pages/Budget';
 // import TodoPage from './pages/Todo';
 
@@ -31,6 +31,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <PrivateRoute exact path="/profile" component={ProfilePage} />
+          <PrivateRoute exact path="/guests" component={GuestsPage} />
           <Route
             exact
             path="/venue"

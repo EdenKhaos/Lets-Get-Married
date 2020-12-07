@@ -8,11 +8,15 @@ import {
   Row,
   Col,
 } from 'react-bootstrap';
+import Footer from '../../components/Footer';
+import ProfileNav from '../../components/ProfileNav';
 import SearchTable from '../../components/SearchTable';
 import { textFilter } from 'react-bootstrap-table2-filter';
-import './style.css';
 import axios from 'axios';
 import { useAuth0 } from '@auth0/auth0-react';
+
+
+import './style.css';
 
 const GuestsPage = (props) => {
   const [addShow, setAddShow] = useState(false);
@@ -219,7 +223,10 @@ const GuestsPage = (props) => {
   ];
 
   return (
-    <Container className="marginCustom mt-5">
+    <Container fluid className = "p-0" >
+      <div>
+      <ProfileNav/>
+      </div>
       <Row className="shadow-lg mb-3 card-custom-style d-flex flex-wrap p-lg-5 p-sm-1">
         <Col>
           <h3 className="title-style mb-5">Manage Guests</h3>
@@ -452,6 +459,7 @@ const GuestsPage = (props) => {
           </div>
         </Col>
       </Row>
+      <Footer />
     </Container>
   );
 };
