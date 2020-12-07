@@ -14,7 +14,7 @@ const InfoCard = (props) => {
           {props.title}
         </Card.Title>
         <Card.Text className="cards-component-text">
-          <Link to={props.link} target="_blank">{props.summary}</Link>
+          <Link href={props.link} target="_blank">{props.summary}</Link>
         </Card.Text>
       </Card.Body>
     </Card>

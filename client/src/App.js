@@ -10,7 +10,10 @@ import VenuePage from './pages/Venue';
 import CateringPage from './pages/Catering';
 import LodgingPage from './pages/Lodging';
 import Home from './pages/Home';
-// import Profile from './components/Profile';
+import ProfilePage from './pages/Profile';
+import PrivateRoute from './components/PrivateRoute';
+import { useAuth0 } from '@auth0/auth0-react';
+import Loading from './components/Loading';
 // import UserProvider from './utils/UserContext';
 // import Auth from './pages/Auth';
 // import NoMatch from './pages/NoMatch';
@@ -19,11 +22,15 @@ import Home from './pages/Home';
 // import TodoPage from './pages/Todo';
 
 function App() {
+  const { isLoading } = useAuth0();
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
-    // <UserProvider>
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
+          <PrivateRoute exact path="/profile" component={ProfilePage} />
           <Route
             exact
             path="/venue"
@@ -49,11 +56,9 @@ function App() {
             path="/signup"
             render={() => <Auth action="signup" />}
           />
-          <Route exact path="/profile" component={Profile} />
           <Route render={NoMatch} /> */}
         </Switch>
       </Router>
-    // </UserProvider >
 
   );
 };
