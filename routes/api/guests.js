@@ -39,7 +39,7 @@ router.get('/:id', function (req, res) {
 });
 
 // post a guest **
-router.post('/', function (req, res) {
+router.post('/api/addguests', function (req, res) {
   //TODOs Validate
   console.log(req.body);
   db.Guest.create({
