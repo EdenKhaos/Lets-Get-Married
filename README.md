@@ -25,6 +25,7 @@
   - [Core Node Dependencies](#core-node-depencencies)
 - [Future Development](#future-development)
 - [Team Members](#team-members)
+- [Photo Credits](#photo-credits)
 
 ---
 ## Project Description
@@ -129,8 +130,6 @@ Once all dependencies are installed run `npm run start` to start the application
 
 - Node.js
 - React.js
-- Mongoose DB
-- Axios
 - Google Maps API
 - Google Places API
 - Google Geolocation API
@@ -141,9 +140,8 @@ Once all dependencies are installed run `npm run start` to start the application
 The dependencies listed below are all the `NPM packages` used throughout this project.
 
 - axios
-- bcryptjs
-- cors
-- dotenv
+- MySQL
+- Sequalize
 - express
 - passport
 - react-router-dom
@@ -157,9 +155,9 @@ The dependencies listed below are all the `NPM packages` used throughout this pr
 
 For `future` development, we would like to incorporate the following feature `enhancements` into our web application:
 
-- 
-- 
-- 
+- Add checklist page and saved data to pass through DB.
+- Make guest list and budget pages to save data to pass through DB.
+- Modify current elements to allow deletions for map pins, budget items, guest list, and checklist items.
 
 ---
 
@@ -171,5 +169,12 @@ For `future` development, we would like to incorporate the following feature `en
 - [Lisa Van Huijkelom](https://github.com/lvv5040)
 
 ---
+## Photo Credits
+* https://unsplash.com/@keebarber
+* https://unsplash.com/@anetakpawlik
+* https://unsplash.com/@viktortalashuk
+* https://www.charletonchurchill.com/https://www.charletonchurchill.com/mount-everest-base-camp-adventure-wedding-elopement/
+* https://www.allisonkellyphoto.com/weddings
+* https://www.bdfkphotography.com/
 
 [Table of Contents](#table-of-contents)
