@@ -35,15 +35,5 @@ module.exports = function (sequelize, DataTypes) {
       },
     });
   
-    Guest.associate = function (models) {
-      // Associating Guest with Invitation
-      // When an Guest is deleted,they are also deleted from the invitation table
-      Guest.hasOne(models.Invitation, {
-        onDelete: 'cascade',
-      });
-  
-      models.Invitation.belongsTo(Guest);
-    };
-  
     return Guest;
   };
