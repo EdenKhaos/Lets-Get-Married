@@ -4,6 +4,7 @@ import './style.css';
 import { Nav, Navbar } from 'react-bootstrap';
 import LogoutLink from '../LogoutButton';
 import GuestListButton from '../../components/GuestListButton';
+import BudgetButton from '../../components/BudgetButton';
 
 
 const ProfileNavigation = () => {
@@ -23,6 +24,7 @@ const ProfileNavigation = () => {
             <Navbar.Collapse>
                 <Nav className="ml-auto color-link">
                     <GuestListButton />
+                    <BudgetButton />
                     <LogoutLink />
                 </Nav>
             </Navbar.Collapse>

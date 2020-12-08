@@ -436,28 +436,47 @@ const GuestsPage = (props) => {
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                  <td>Moria Rose</td>
+                  <td>MRose@CrowsHaveEyes.com</td>
+                  <td>303-200-6972</td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
+                  <td>Johnny Rose</td>
+                  <td>Johnny@RoseVideo.com</td>
+                  <td>303-201-7426</td>
                 </tr>
                 <tr>
-                  <td>3</td>
-                  <td colSpan="2">Larry the Bird</td>
-                  <td>@twitter</td>
+                <td>4</td>
+                  <td>David Rose</td>
+                  <td>David@RoseApothecary.com</td>
+                  <td>303-203-1880</td>
+                </tr>
+                <tr>
+                <td>5</td>
+                  <td>Alexis Rose</td>
+                  <td>HotAlexis@aol.com</td>
+                  <td>303-202-7458</td>
+                </tr>
+                <tr>
+                <td>3</td>
+                  <td>Patrick Brewer</td>
+                  <td>Patrick@RoseApothecary.com</td>
+                  <td>303-206-4361</td>
+                </tr>
+                <tr>
+                <td>6</td>
+                  <td>Stevie Budd</td>
+                  <td>Stevie@RoseBudMotel.com</td>
+                  <td>303-204-2400</td>
                 </tr>
               </tbody>
             </Table>
