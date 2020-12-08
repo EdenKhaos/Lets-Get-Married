@@ -155,8 +155,8 @@ The dependencies listed below are all the `NPM packages` used throughout this pr
 
 For `future` development, we would like to incorporate the following feature `enhancements` into our web application:
 
-- Add checklist page and saved data to pass through DB
-- Make guest list and budget pages to save data to pass    through DB
+- Add checklist page and saved data to pass through DB.
+- Make guest list and budget pages to save data to pass through DB.
 - Modify current elements to allow deletions for map pins, budget items, guest list, and checklist items.
 
 ---
