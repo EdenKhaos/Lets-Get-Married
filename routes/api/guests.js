@@ -22,7 +22,6 @@ router.get('/', function (req, res) {
 
 // get guest by id **
 router.get('/:id', function (req, res) {
-  let email = getEmail(req.headers.authorization);
   db.Guest.findOne({
     where: {
       id: req.params.id,
@@ -48,14 +47,7 @@ router.post('/', function (req, res) {
     email: req.body.email,
     phone: req.body.phone,
     WeddingId: req.body.eventid,
-  }).then(function (dbCreateGuest) {
-    db.Invitation.create({
-      GuestId: dbCreateGuest.id,
-      status: 'No',
-    }).then(function (dbCreateInvitation) {
-      res.json(dbCreateInvitation);
-    });
-  });
+  })
 });
 
 // update guest by id

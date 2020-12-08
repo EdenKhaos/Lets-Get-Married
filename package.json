@@ -16,8 +16,10 @@
     "memorystore": "^1.6.4",
     "mongoose": "^5.3.16",
     "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "sequelize": "^6.3.5",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
