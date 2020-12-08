@@ -18,7 +18,7 @@ import Loading from './components/Loading';
 // import Auth from './pages/Auth';
 // import NoMatch from './pages/NoMatch';
 import GuestsPage from './pages/Guests';
-// import BudgetPage from './pages/Budget';
+import BudgetPage from './pages/Budget';
 // import TodoPage from './pages/Todo';
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <PrivateRoute exact path="/profile" component={ProfilePage} />
           <PrivateRoute exact path="/guests" component={GuestsPage} />
+          <PrivateRoute exact path="/budget" component={BudgetPage} />
           <Route
             exact
             path="/venue"
