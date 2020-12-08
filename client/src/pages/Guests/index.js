@@ -7,6 +7,7 @@ import {
   FormControl,
   Row,
   Col,
+  Table
 } from 'react-bootstrap';
 import Footer from '../../components/Footer';
 import ProfileNav from '../../components/ProfileNav';
@@ -14,7 +15,6 @@ import SearchTable from '../../components/SearchTable';
 import { textFilter } from 'react-bootstrap-table2-filter';
 import axios from 'axios';
 import { useAuth0 } from '@auth0/auth0-react';
-
 
 import './style.css';
 
@@ -49,16 +49,17 @@ const GuestsPage = (props) => {
       headers: { Authorization: `Bearer ${token}` },
     };
 
-    axios(config)
-      .then(function (response) {
-        setGuests(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    //   axios(config)
+    //     .then(function (response) {
+    //       setGuests(response.data);
+    //     })
+    //     .catch(function (error) {
+    //       // console.log(error);
+    //     });
   };
 
   const handleAddGuest = async (event) => {
+    console.log('handleAddGuest');
     setAddShow(false);
 
     setShowError(false);
@@ -67,7 +68,7 @@ const GuestsPage = (props) => {
     if (!email) return displayError('Please enter a valid email');
     if (!phone) return displayError('Please enter a valid phone');
 
-    event.preventDefault();
+    // event.preventDefault();
 
     const token = await getAccessTokenSilently();
 
@@ -80,16 +81,18 @@ const GuestsPage = (props) => {
     });
     var config = {
       method: 'post',
-      url: '/api/guests',
+      url: '/api/addguests',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
         Authorization: `Bearer ${token}`,
       },
       data: data,
     };
+    console.log(config);
 
     axios(config)
       .then(function (response) {
+        console.log(response);
         setName('');
         setPhone('');
         setEmail('');
@@ -223,9 +226,9 @@ const GuestsPage = (props) => {
   ];
 
   return (
-    <Container fluid className = "p-0" >
+    <Container fluid className="p-0">
       <div>
-      <ProfileNav/>
+        <ProfileNav />
       </div>
       <Row className="shadow-lg mb-3 card-custom-style d-flex flex-wrap p-lg-5 p-sm-1">
         <Col>
@@ -234,10 +237,7 @@ const GuestsPage = (props) => {
         <Col>
           <div className="row m-auto">
             {/* Add Guest Button */}
-            <Button
-              variant="outline-primary"
-              onClick={() => setAddShow(true)}
-            >
+            <Button variant="outline-primary" onClick={() => setAddShow(true)}>
               ADD
             </Button>{' '}
             {/* Modal alert to add */}
@@ -276,14 +276,9 @@ const GuestsPage = (props) => {
               </Modal.Body>
               <Modal.Footer>
                 {showError && (
-                  <h6 className="text-danger mr-auto">
-                    {errorMessage}
-                  </h6>
+                  <h6 className="text-danger mr-auto">{errorMessage}</h6>
                 )}
-                <Button
-                  variant="secondary"
-                  onClick={() => setAddShow(false)}
-                >
+                <Button variant="secondary" onClick={() => setAddShow(false)}>
                   Close
                 </Button>
                 <Button variant="primary" onClick={handleAddGuest}>
@@ -354,32 +349,20 @@ const GuestsPage = (props) => {
                 </h6>
               </Modal.Body>
               <Modal.Footer>
-                <Button
-                  variant="secondary"
-                  onClick={() => setEditShow(false)}
-                >
+                <Button variant="secondary" onClick={() => setEditShow(false)}>
                   Close
                 </Button>
-                <Button
-                  variant="primary"
-                  onClick={() => handleEditGuest()}
-                >
+                <Button variant="primary" onClick={() => handleEditGuest()}>
                   Save Changes
                 </Button>
               </Modal.Footer>
             </Modal>
             {/* Invite Guest Button */}
-            <Button
-              variant="outline-info"
-              onClick={() => setInviteShow(true)}
-            >
+            <Button variant="outline-info" onClick={() => setInviteShow(true)}>
               INVITE
             </Button>{' '}
             {/* Modal alert to invite*/}
-            <Modal
-              show={inviteShow}
-              onHide={() => setInviteShow(false)}
-            >
+            <Modal show={inviteShow} onHide={() => setInviteShow(false)}>
               <Modal.Header closeButton>
                 <Modal.Title>Invite Guest</Modal.Title>
               </Modal.Header>
@@ -411,10 +394,7 @@ const GuestsPage = (props) => {
               REMOVE
             </Button>{' '}
             {/* Modal alert to delete*/}
-            <Modal
-              show={deleteShow}
-              onHide={() => setDeleteShow(false)}
-            >
+            <Modal show={deleteShow} onHide={() => setDeleteShow(false)}>
               <Modal.Header closeButton>
                 <Modal.Title>Delete Guest</Modal.Title>
               </Modal.Header>
@@ -423,8 +403,7 @@ const GuestsPage = (props) => {
                   className="text-danger mt-3 text-center"
                   hidden={selectedRow.id}
                 >
-                  'Delete failed: Please select a guest to delete (Try
-                  again)',
+                  'Delete failed: Please select a guest to delete (Try again)',
                 </h6>
                 <h6 hidden={!selectedRow.id}>
                   {' '}
@@ -438,10 +417,7 @@ const GuestsPage = (props) => {
                 >
                   Do Not Delete
                 </Button>
-                <Button
-                  variant="primary"
-                  onClick={() => handleDeleteGuest()}
-                >
+                <Button variant="primary" onClick={() => handleDeleteGuest()}>
                   Yes Delete Entry
                 </Button>
               </Modal.Footer>
@@ -456,6 +432,35 @@ const GuestsPage = (props) => {
               columns={columns}
               selectRow={selectRow}
             />
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td colSpan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </Table>
           </div>
         </Col>
       </Row>
