@@ -1,0 +1,10 @@
+.message-component-style {
+    font-size: 55px;
+    font-family: 'Rochester', cursive;
+    display:block;
+  }
+
+h3 {
+    text-align: center !important;
+    color: rgb(0, 71, 165);
+  }

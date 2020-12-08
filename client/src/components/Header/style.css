@@ -1,0 +1,11 @@
+.message-component-style {
+    font-size: 55px;
+    font-family: 'Rochester', cursive;
+    display:block;
+  }
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    color: rgb(0, 71, 165);
+  }
